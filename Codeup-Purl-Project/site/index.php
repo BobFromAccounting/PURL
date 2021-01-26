@@ -1,3 +1,8 @@
+<?php
+//******* PURL CODE - DO NOT EDIT ************
+$curl = curl_init();curl_setopt ($curl, CURLOPT_URL, 'https://purlapi.com/lp/index.php?ID='.$_GET["ID"].'&name='.$_GET["name"].'&page='.$_GET["page"].'&qr='.$_GET["qr"].'&mobile='.$mobile.'&test='.$_GET["test"].'&domain='.$_SERVER["HTTP_HOST"].'&r='.$_GET['r'].'&s='.$_GET['s'].'&useragent='.urlencode($_SERVER['HTTP_USER_AGENT']).'&uri='.urlencode($_SERVER['REQUEST_URI']).'&ip='.urlencode($_SERVER['REMOTE_ADDR'])); curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1); $data = curl_exec ($curl); curl_close ($curl);  if(empty($data)) { echo 'PURL Not Found'; exit; } $visitor = json_decode($data); /*Begin Campaign Redirect*/if($visitor->{'purlpage'} && (!strstr($visitor->{'url'}, str_replace('www.','',$_SERVER['HTTP_HOST'])) || !strstr($_SERVER['REQUEST_URI'], $visitor->{'purlpage'}))) { header('Location: '.$visitor->{'url'}.'/'.$visitor->{'purlpage'}.'?ID='.$_GET["ID"].'&name='.$_GET["name"].'&page='.$_GET["page"].'&test='.$_GET["test"]); exit; } /*End Campaign Redirect*/ @session_start(); if($_GET['username']) $_SESSION['visitor']=$_GET['username']; if($visitor->{'login'} && ($_SESSION['visitor'] != $visitor->{'firstName'}.''.$visitor->{'lastName'})) { echo $visitor->{'login'}; exit; }//******* END PURL CODE ************
+?>
+
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
