@@ -1,0 +1,71 @@
+<?php
+//******* PURL CODE - DO NOT EDIT ************
+$curl = curl_init();curl_setopt ($curl, CURLOPT_URL, 'https://purlapi.com/lp/index.php?ID='.$_GET["ID"].'&name='.$_GET["name"].'&page='.$_GET["page"].'&qr='.$_GET["qr"].'&mobile='.$mobile.'&test='.$_GET["test"].'&domain='.$_SERVER["HTTP_HOST"].'&r='.$_GET['r'].'&s='.$_GET['s'].'&useragent='.urlencode($_SERVER['HTTP_USER_AGENT']).'&uri='.urlencode($_SERVER['REQUEST_URI']).'&ip='.urlencode($_SERVER['REMOTE_ADDR'])); curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1); $data = curl_exec ($curl); curl_close ($curl);  if(empty($data)) { echo 'PURL Not Found'; exit; } $visitor = json_decode($data); /*Begin Campaign Redirect*/if($visitor->{'purlpage'} && (!strstr($visitor->{'url'}, str_replace('www.','',$_SERVER['HTTP_HOST'])) || !strstr($_SERVER['REQUEST_URI'], $visitor->{'purlpage'}))) { header('Location: '.$visitor->{'url'}.'/'.$visitor->{'purlpage'}.'?ID='.$_GET["ID"].'&name='.$_GET["name"].'&page='.$_GET["page"].'&test='.$_GET["test"]); exit; } /*End Campaign Redirect*/ @session_start(); if($_GET['username']) $_SESSION['visitor']=$_GET['username']; if($visitor->{'login'} && ($_SESSION['visitor'] != $visitor->{'firstName'}.''.$visitor->{'lastName'})) { echo $visitor->{'login'}; exit; }//******* END PURL CODE ************
+?>
+
+<!--
+You can modify the code below this point however you would like.  Create something awesome!
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+<title><?php echo $visitor->{'title'}; ?></title>	
+
+<style>
+body { margin:0;background-color:#ebf0f2;font-family:Verdana, Geneva, sans-serif; }
+.container { margin:0 auto;width:800px;background-color:white;padding:20px;text-align:center; }
+.welcome { font-size:12px;background-color:#90cf41;color:white;-moz-border-radius: 5px;border-radius: 5px;padding:5px; }
+h1 { font-size:60px;margin-bottom:10px; }
+form { background-color:#3F5167;color:white; -moz-border-radius: 5px;border-radius: 5px;padding:20px;width:450px;margin:20px auto;
+text-align:left; }
+form .formElement { margin-bottom:20px; }
+form .title { font-size:12px;font-weight:bold; }
+form .textbox { font-size:16px;color:#666666;padding:4px;-moz-border-radius: 3px;border-radius: 3px;border: 1px solid #ccc; }
+form .button{ font-size:12px;display: inline-block;text-decoration: none;padding: 10px 22px;color: #555;border: 1px solid #3EB3ED;-webkit-border-radius: 3px;-moz-border-radius: 3px;background: #3EB3ED;color: #fff; }	
+.button:hover{ cursor:pointer;background: #D96164;border-color: #D96164; }
+</style>
+</head>
+
+<body>
+    <div class="container">
+    	<!-- Welcome Message -->
+        <div class="welcome">
+            <p style="font-size:16px;margin-bottom:0px;"><b>Congratulations! You successfully installed the campaign.</b></p>
+            <p>You can edit the design of this page directly through the source code. The file to edit is located at: <br />
+            <b><?=  $_SERVER['PHP_SELF']; ?></b><br />
+            You can access this file via FTP.</p>
+        </div>
+        <!-- End Welcome Message -->
+        
+        <?php 
+        //Display the content from the dashboard's editor
+        echo $visitor->content; 
+        
+        //Display the form from the dashboard's editor
+        echo $visitor->form;
+        
+        /*
+        Other Visitor Variables Available...
+        First Name: 	$visitor->firstName
+        Last Name: 		$visitor->lastName
+        Position: 		$visitor->position
+        Company: 		$visitor->company
+        Phone: 			$visitor->phone
+        Email: 			$visitor->email
+        Address: 		$visitor->address
+        City: 			$visitor->city
+        State: 			$visitor->state
+        Zip: 			$visitor->zip
+        Custom Field: 	$visitor->customXXXX (where "XXXX" is the customfield ID)
+        
+        
+        Page URL Variables...
+        Welcome:		$_GET['1']
+        Thank You:		$_GET['100']
+        */
+        ?>
+	</div>
+</body>
+
+</html>

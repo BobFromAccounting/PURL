@@ -1,0 +1,72 @@
+/*
+*
+* Preloader
+*/
+
+//
+// Base styles
+//
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: $white;
+  transition: .3s all ease;
+
+  &.loaded {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.preloader-body {
+  text-align: center;
+
+  p {
+    position: relative;
+    right: -8px;
+  }
+}
+
+//
+// Custom Styles
+// 
+.cssload-loader {
+  text-align: center;
+  width: 97px;
+}
+.cssload-loader .cssload-ball {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background-color: $primary;
+  border-radius: 50%;
+  animation: cssload-motion 3.45s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
+
+
+@keyframes cssload-motion {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  25% {
+    transform: translateX(-49px) scale(0.3);
+  }
+  50% {
+    transform: translateX(0) scale(1);
+  }
+  75% {
+    transform: translateX(49px) scale(0.3);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}

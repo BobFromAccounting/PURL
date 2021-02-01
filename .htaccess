@@ -1,0 +1,8 @@
+#PURL CODE
+RewriteEngine on 
+RewriteCond %{SCRIPT_FILENAME} !([A-Za-z0-9_-]+)\.(html?|php|asp|css|jpg|gif|shtml|htm|xhtml|txt|ico|xml)/?$ [NC] 
+RewriteCond %{SCRIPT_FILENAME} ([A-Za-z0-9_-]+)\.([A-Za-z0-9_-]+)/?$ [NC] 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteRule ^([A-Za-z0-9_-]+)\.([A-Za-z0-9_-]+)/?$ http://codeup.ipurl.co/purlpage_GoCodeupPlacement/index.php?name=$1$2&ID=5210&page=1 [R,L]
+#END PURL CODE
