@@ -14,7 +14,8 @@
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <!-- Stylesheets-->
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -28,7 +29,8 @@
       <div class="cssload-container">
         <div class="cssload-loader">
           <div class="cssload-ball"></div>
-        </div><img src="images/codeup_logo_black.png" alt="" width="106" height="51"/>
+        </div>
+        <img src="images/codeup_logo_black.png" alt="" width="106" height="51"/>
       </div>
     </div>
     <!-- Page-->
@@ -93,16 +95,16 @@
             <div class="row justify-content-end">
               <div class="col-md-6 col-lg-5">
                 <h3 class="heading-decorated">Pick Your Next Career Path, <?php echo $visitor->{'firstName'}; ?>!</h3>
-                <p>Don’t just get a job, launch a fulfilling career as a data scientist or web developer without even leaving your house. Due to COVID-19, our programs are now 100% virtual!</p>
+                <p class="blockquote">Don’t just get a job, launch a fulfilling career as a data scientist or web developer without even leaving your house. Due to COVID-19, our programs are now 100% virtual!</p>
                 <div class="flex-column pb-5">
                   <h4>Full-Stack Web Development</h4>
-                  <p>As our world only continues to go more virtual, the need for web developers only increases. Learn front-end design and back-end logic using in-demand technologies. Bring your ideas to life and make your mark on the most in-demand career in the country.</p>
-                  <button class="button button-primary w-100"><a href="https://codeup.com/wd-admissions" target="_blank">Explore Web Development</a></button>
+                  <p class="blockquote">As our world only continues to go more virtual, the need for web developers only increases. Learn front-end design and back-end logic using in-demand technologies. Bring your ideas to life and make your mark on the most in-demand career in the country.</p>
+                  <button class="button button-primary w-100" onClick="navigationCallback('https://codeup.com/wd-admissions')">Explore Web Development</button>
                 </div>
                 <div class="flex-column">
                   <h4>Data Science</h4>
-                  <p>Become the expert. Companies have always relied on the numbers, but now, more than ever, they are looking to hire the people who know the numbers best. Learn the most important skills to make data-driven decisions for any company. Find patterns in data and influence business decisions.</p>
-                  <button class="button button-primary w-100"><a href="https://codeup.com/ds-admissions" target="_blank">Explore Data Science</a></button>
+                  <p class="blockquote">Become the expert. Companies have always relied on the numbers, but now, more than ever, they are looking to hire the people who know the numbers best. Learn the most important skills to make data-driven decisions for any company. Find patterns in data and influence business decisions.</p>
+                  <button class="button button-primary w-100" onClick="navigationCallback('https://codeup.com/ds-admissions')">Explore Data Science</button>
                 </div>
               </div>
             </div>
@@ -120,7 +122,7 @@
               <div class="thumbnail-classic-minimal"><img src="images/codeup_learning.jpg" alt="" width="300" height="225"/>
                 <div class="caption">
                   <h5><a class="thumbnail-classic-title" href="#">Start Your Career Faster</a></h5>
-                  <p>Spend 670 hours in live, full-time instruction over 22 weeks of full-time, fully immersive learning. That’s the same number of hours you’d spend getting a four year Bachelor’s Degree.</p>
+                  <p class="blockquote">Spend 670 hours in live, full-time instruction over 22 weeks of full-time, fully immersive learning. That’s the same number of hours you’d spend getting a four year Bachelor’s Degree.</p>
                 </div>
               </div>
             </div>
@@ -128,8 +130,7 @@
               <div class="thumbnail-classic-minimal"><img src="images/codeup_smile.jpg" alt="" width="300" height="225"/>
                 <div class="caption">
                   <h5><a class="thumbnail-classic-title" href="#">Learn What Matters</a></h5>
-                  <p>Learn the skills that employers are looking for. Expert instructors teach a curriculum that evolves with feedback from hiring managers.
-                  </p>
+                  <p class="blockquote">Learn the skills that employers are looking for. Expert instructors teach a curriculum that evolves with feedback from hiring managers.</p>
                 </div>
               </div>
             </div>
@@ -137,7 +138,7 @@
               <div class="thumbnail-classic-minimal"><img src="images/codeup_allhands.jpg" alt="" width="300" height="225"/>
                 <div class="caption">
                   <h5><a class="thumbnail-classic-title" href="#">Hands-on Experience</a></h5>
-                  <p>Become a professional with plenty of hands-on project experience, all while building a portfolio to show employers.</p>
+                  <p class="blockquote">Become a professional with plenty of hands-on project experience, all while building a portfolio to show employers.</p>
                 </div>
               </div>
             </div>
@@ -145,7 +146,7 @@
               <div class="thumbnail-classic-minimal"><img src="images/codeup_hired.jpg" alt="" width="300" height="225"/>
                 <div class="caption">
                   <h5><a class="thumbnail-classic-title" href="#">Get Hired</a></h5>
-                  <p>Don’t do the job search alone. Get personalized career coaching, resume feedback, interview practice, access to our employer network, and more, even after graduation.</p>
+                  <p class="blockquote">Don’t do the job search alone. Get personalized career coaching, resume feedback, interview practice, access to our employer network, and more, even after graduation.</p>
                 </div>
               </div>
             </div>
@@ -154,11 +155,12 @@
       </section>
 
 
-      <section class="section-lg bg-image text-center bg-accent bg-overlay-dark" style="background-image: url(images/codeup_futures.jpg)">
+      <section class="section-lg bg-image text-center bg-overlay-dark" style="background-image: url(images/codeup_futures.jpg)">
         <div class="container">
-          <h2>Our Guarantee To You</h2>
-          <h6>You will never be just a number to us. We are personally invested in your success before, during, and after Codeup. If you don’t get a job, that means we didn’t do ours. Get hired within 6 months of graduating, or get your tuition back.</h6>
-          <a class="button button-primary" href="#top">Contact us</a>
+          <h3>Our Guarantee To You</h3>
+          <p class="blockquote text-white">You will never be just a number to us. We are personally invested in your success before, during, and after Codeup. If you don’t get a job, that means we didn’t do ours.</p>
+          <p class="blockquote text-white">So we guarantee that you will be hired within 6 months of graduating, or we will give you 100% of your tuition back.</p>
+          <button class="button button-primary" onClick="navToTop()" type="button">Contact us</button>
         </div>
       </section>
 
@@ -180,7 +182,7 @@
             <div class="col-xl-8 text-xl-left">
               <h4 class="heading-decoratedIf"><?php echo $visitor->{'firstName'}; ?>, we'll be there to help at every step toward launching your new career. </h4>
             </div>
-            <div class="col-xl-2 text-xl-right"><a class="button button-primary" href="#top">Contact Us</a></div>
+            <div class="col-xl-2 text-xl-right"><button class="button button-primary" onClick="navToTop()" type="button">Contact Us</button></div>
           </div>
         </div>
       </section>
@@ -220,6 +222,13 @@
 
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
-    <!-- coded by Ragnar-->
+    <script>
+      const navigationCallback = url => {
+        return window.open(url, "_blank");
+      }
+      const navToTop = () => {
+        return window.location.href = "#";
+      }
+    </script>
   </body>
 </html>
