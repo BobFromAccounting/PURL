@@ -4,5 +4,5 @@ RewriteCond %{SCRIPT_FILENAME} !([A-Za-z0-9_-]+)\.(html?|php|asp|css|jpg|gif|sht
 RewriteCond %{SCRIPT_FILENAME} ([A-Za-z0-9_-]+)\.([A-Za-z0-9_-]+)/?$ [NC] 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f 
-RewriteRule ^([A-Za-z0-9_-]+)\.([A-Za-z0-9_-]+)/?$ http://codeup.ipurl.co/purlpage_GoCodeupPlacement/index.php?name=$1$2&ID=5210&page=1 [R,L]
+RewriteRule ^([A-Za-z0-9_-]+)\.([A-Za-z0-9_-]+)/?$ purlpage_GoCodeupPlacement/index.php?name=$1$2&ID=5210&page=1
 #END PURL CODE
