@@ -7,7 +7,7 @@
 <html class="wide wow-animation" lang="en">
   <head>
     <!-- Site Title-->
-    <title>Codeup + <?php echo $visitor->firstName; ?></title>
+    <title><?php echo $visitor->firstName; ?> + Codeup = Success</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,11 +40,11 @@
         <div class="rd-navbar-wrap">
           <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-sm-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true" data-lg-stick-up-offset="100px" data-xl-stick-up-offset="100px" data-xxl-stick-up-offset="100px">
             <div class="rd-navbar-inner">
-              <a class="" href="index.php"><img src="images/OfficialCodeupLogo.svg" alt="" width="200" height="100"/></a>
+              <a href="https://www.codeup.com" target="_blank"><img src="images/OfficialCodeupLogo.svg" alt="" width="200" height="100"/></a>
               <!-- RD Navbar Nav-->
               <div class="rd-navbar-nav-wrap">
                 <ul class="rd-navbar-nav">
-                  <li><a href="#"><span class="rd-navbar-link-text">Welcome, <?php echo $visitor->{'firstName'}; ?>!</span></a></li>
+                  <li><a href="#"><span class="rd-navbar-link-text">Welcome <?php echo $visitor->{'firstName'}; ?>!</span></a></li>
                 </ul>
               </div>
             </div>
@@ -56,25 +56,24 @@
           <div class="container">
             <div class="row row-50 align-items-center justify-content-center justify-content-md-between">
               <div class="col-md-6 col-lg-5">
-                <h2>Need a new job, <?php echo $visitor->{'firstName'}; ?>?</h2>
-                <h4>Launch an exciting career in tech!</h4>
-                <h6 class="text-width-small">Learn to code from home in just 6 months. Get hired, or your money back</h6>
+                <h2>Need a new job, <span style="color: #77A04A"><?php echo $visitor->{'firstName'}; ?></span>?</h2>
+                <p style="font-size: 1.5rem">Learn to code from home in just 6 months. Get hired, or your money back</p>
               </div>
               <div class="col-sm-10 col-md-6">
                 <div class="box-form-1">
-                  <h5>Have questions, <?php echo $visitor->{'firstName'}; ?>?</h5>
+                  <h5>Get a current list of Web Development & Data Science jobs in your area <span style="color: #77A04A"><?php echo $visitor->{'firstName'}; ?></span>!</h5>
                   <!-- RD Mailform-->
-                  <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                  <form action="http://www.purlapi.com/lp/submit.php" method="post" accept-charset="utf-8">
                     <div class="row row-20 gutters-30">
                       <div class="col-xl-6">
                         <div class="form-wrap form-wrap_icon linear-icon-envelope">
-                          <input class="form-input" id="contact-email-4" type="email" name="email" data-constraints="@Email @Required">
+                          <input class="form-input" id="contact-email-4" type="email" name="email" data-constraints="@Email @Required" value="<?php echo $visitor->{'email'}; ?>">
                           <label class="form-label" for="contact-email-4">Your e-mail</label>
                         </div>
                       </div>
                       <div class="col-xl-6">
                         <div class="form-wrap form-wrap_icon linear-icon-phone">
-                          <input class="form-input" id="contact-phone-4" type="text" name="phone" data-constraints="@Numeric">
+                          <input class="form-input" id="contact-phone-4" type="text" name="phone" data-constraints="@Numeric" value="<?php echo $visitor->{'phone'}; ?>">
                           <label class="form-label" for="contact-phone-4">Phone number</label>
                         </div>
                       </div>
@@ -94,7 +93,7 @@
           <div class="container">
             <div class="row justify-content-end">
               <div class="col-md-6 col-lg-5">
-                <h3 class="heading-decorated">Pick Your Next Career Path, <?php echo $visitor->{'firstName'}; ?>!</h3>
+                <h3 class="heading-decorated">Pick Your Next Career Path <span style="color: #77A04A"><?php echo $visitor->{'firstName'}; ?></span>!</h3>
                 <p class="blockquote">Don’t just get a job, launch a fulfilling career as a data scientist or web developer without even leaving your house. Due to COVID-19, our programs are now 100% virtual!</p>
                 <div class="flex-column pb-5">
                   <h4>Full-Stack Web Development</h4>
@@ -157,16 +156,16 @@
 
       <section class="section-lg bg-image text-center bg-overlay-dark" style="background-image: url(images/codeup_futures.jpg)">
         <div class="container">
-          <h3>Our Guarantee To You</h3>
+          <h3>Our Guarantee <?php echo $visitor->{'firstName'}; ?></h3>
           <p class="blockquote text-white">You will never be just a number to us. We are personally invested in your success before, during, and after Codeup. If you don’t get a job, that means we didn’t do ours.</p>
           <p class="blockquote text-white">So we guarantee that you will be hired within 6 months of graduating, or we will give you 100% of your tuition back.</p>
-          <button class="button button-primary" onClick="navToTop()" type="button">Contact us</button>
+          <button class="button button-primary" onClick="navigationCallback('https://app.hubspot.com/meetings/sarah187/general-infoquestions-round-robin')" type="button">Contact us</button>
         </div>
       </section>
 
       <section class="section section-md bg-default text-center" id="testimonials">
         <div class="container">
-          <h3 class="heading-decorated">Testimonials</h3>
+          <h3 class="heading-decorated">Testimonial</h3>
           <div class="row row-50">
             <video width="100%" playsinline  controls>
               <source src="assets/AbbyPerezFinal-HD1080p.mp4" type="video/mp4">
@@ -180,9 +179,9 @@
         <div class="container">
           <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
             <div class="col-xl-8 text-xl-left">
-              <h4 class="heading-decoratedIf"><?php echo $visitor->{'firstName'}; ?>, we'll be there to help at every step toward launching your new career. </h4>
+              <h4 class="heading-decoratedIf"><span style="color: #FFC20E"><?php echo $visitor->{'firstName'}; ?></span>, we'll be there to help at every step toward launching your new career. </h4>
             </div>
-            <div class="col-xl-2 text-xl-right"><button class="button button-primary" onClick="navToTop()" type="button">Contact Us</button></div>
+            <div class="col-xl-2 text-xl-right"><button class="button button-primary" onClick="navigationCallback('https://app.hubspot.com/meetings/sarah187/general-infoquestions-round-robin')" type="button">Contact Us</button></div>
           </div>
         </div>
       </section>
@@ -194,7 +193,7 @@
           <ul class="list-xxs">
             <li>
               <dl class="list-terms-minimal">
-                <dt>Phones</dt>
+                <dt>Phone</dt>
                 <dd>
                   <ul class="list-semicolon">
                     <li><a href="tel:#">(210)-802-7289</a></li>
@@ -225,9 +224,6 @@
     <script>
       const navigationCallback = url => {
         return window.open(url, "_blank");
-      }
-      const navToTop = () => {
-        return window.location.href = "#";
       }
     </script>
   </body>
