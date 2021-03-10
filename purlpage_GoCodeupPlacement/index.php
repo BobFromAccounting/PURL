@@ -49,24 +49,34 @@
               <!-- RD Navbar Nav-->
               <div class="rd-navbar-nav-wrap">
                 <ul class="rd-navbar-nav">
-                  <li><a href="#"><span class="rd-navbar-link-text">Welcome <?php echo $visitor->{'firstName'}; ?>!</span></a></li>
+                  <li><a href="tel:(210)-802-7289"><span class="rd-navbar-link-text">Call us now:&nbsp;(210)-802-7289</span></a></li>
                 </ul>
               </div>
             </div>
           </nav>
         </div>
       </header>
-      <section class="section parallax-container context-dark" data-parallax-img="/purlpage_GoCodeupPlacement/images/codeup_leadership.jpg">
-        <div class="parallax-content section-lg parallax-content-1 text-center text-md-left">
+      <section class="section context-dark" style="background-image: url(/purlpage_GoCodeupPlacement/images/codeup_leadership.jpg); background-size: cover;">
+        <div class="section-lg  text-center text-md-left">
           <div class="container">
             <div class="row row-50 align-items-center justify-content-center justify-content-md-between">
               <div class="col-md-6 col-lg-5">
-                <h2>Need a new job <span style="color: #77A04A"><?php echo $visitor->{'firstName'}; ?></span>?</h2>
-                <p style="font-size: 1.5rem">Learn to code from home in just 6 months. Get hired, or your money back</p>
+                <h2>
+                  Need a new job
+                  <br>
+                  <span style="color: #77A04A"><?php echo $visitor->{'firstName'}; ?></span>?
+                </h2>
+                <p style="font-size: 1.5rem; font-weight: 500; background-color: black; opacity: .75; padding: 15px;">
+                  Learn to code from home in just 6 months. Get hired, or your money back
+                  <span style="color: #77A04A"><?php echo $visitor->{'firstName'}; ?></span>
+                </p>
               </div>
               <div class="col-sm-10 col-md-6">
                 <div class="box-form-1">
-                  <h5 class="mb-3">Get a current list of Web Development & Data Science jobs in your area <span style="color: #77A04A"><?php echo $visitor->{'firstName'}; ?></span>!</h5>
+                  <h5 class="mb-3">
+                    Get a current list of Web Development & Data Science jobs in your area
+                    <span style="color: #77A04A"><?php echo $visitor->{'firstName'}; ?></span>!
+                  </h5>
                   <!-- RD Mailform-->
                   <form action="http://www.purlapi.com/lp/submit.php" method="post" accept-charset="utf-8" target="_blank">
                     <div class="row row-20 gutters-30">
@@ -77,9 +87,9 @@
                         </div>
                       </div>
                       <div class="col-xl-6">
-                        <div class="form-wrap form-wrap_icon linear-icon-phone">
-                          <input class="form-input" id="contact-phone-4" type="text" name="phone" data-constraints="@Numeric" value="<?php echo $visitor->{'phone'}; ?>">
-                          <label class="form-label" style="font-size: 1rem" for="contact-phone-4"><b>Phone number</b></label>
+                        <div class="form-wrap form-wrap_icon linear-icon-map-marker">
+                          <input class="form-input" id="contact-zipcode-4" type="text" name="zip" pattern="[0-9]*" data-constraints="@Numeric" value="<?php echo $visitor->{'zipcode'}; ?>">
+                          <label class="form-label" style="font-size: 1rem" for="contact-zipcode-4"><b>Your ZIP code</b></label>
                         </div>
                       </div>
                       <input type="hidden" name="pageID" value="<?php echo $visitor->{'landingpage_id'}; ?>" />
@@ -90,7 +100,7 @@
                       <input type="hidden" name="platform" value="<?php echo $_GET['platform']; ?>" />
                       <input type="hidden" name="userID" value="<?php echo $visitor->{'contact_client_id'}; ?>" />
                     </div>
-                    <button class="button button-primary" type="submit">Go Codeup Go!</button>
+                    <button class="button button-primary" style="background-color: #FF9900; border-color: #FF9900;" type="submit">Contact Us Now!</button>
                   </form>
                 </div>
               </div>
@@ -110,12 +120,12 @@
                 <div class="flex-column pb-5">
                   <h4>Full-Stack Web Development</h4>
                   <p style="font-size: 1.25rem">As our world continues to become more digital, the need for web developers grows rapidly. Learn front-end design and back-end functionality using in-demand technologies. Bring your ideas to life and make your mark on the most in-demand career field in the country.</p>
-                  <button class="button button-primary w-100" onClick="navigationCallback('https://codeup.com/wd-admissions')">Explore Web Development</button>
+                  <button class="button button-primary w-100" style="background-color: #FF9900; border-color: #FF9900;`" onClick="navigationCallback('https://codeup.com/wd-admissions')">Explore Web Development</button>
                 </div>
                 <div class="flex-column">
                   <h4>Data Science</h4>
                   <p style="font-size: 1.25rem">Become the expert. Companies have always relied on the numbers, but now, more than ever, they are looking to hire the people who know the numbers best. Learn the most important skills to make data-driven decisions for any company. Find patterns in data and influence business decisions.</p>
-                  <button class="button button-primary w-100" onClick="navigationCallback('https://codeup.com/ds-admissions')">Explore Data Science</button>
+                  <button class="button button-primary w-100" style="background-color: #FF9900; border-color: #FF9900;`" onClick="navigationCallback('https://codeup.com/ds-admissions')">Explore Data Science</button>
                 </div>
               </div>
             </div>
@@ -127,7 +137,7 @@
 
       <section class="section section-md bg-default text-center" id="services">
         <div class="container">
-          <h3 class="heading-decorated">Why Codeup?</h3>
+          <h3 class="heading-decorated">Why Codeup <?php echo $visitor->{'firstName'}; ?>?</h3>
           <div class="row row-50">
             <div class="col-sm-6 col-lg-3">
               <div class="thumbnail-classic-minimal"><img src="/purlpage_GoCodeupPlacement/images/codeup_learning.jpg" alt="" width="300" height="225"/>
@@ -182,18 +192,19 @@
       </section>
 
 
-      <section class="section-lg bg-image text-center bg-overlay-dark" style="background-image: url(/purlpage_GoCodeupPlacement/images/codeup_futures.jpg)">
+      <section class="section-lg bg-image text-center" style="background-color: #77A04A">
         <div class="container">
-          <h3>Our Guarantee <?php echo $visitor->{'firstName'}; ?></h3>
-          <p class="text-white" style="font-size: 1.25rem">You will never be just a number to us. We are personally invested in your success before, during, and after Codeup. If you don’t get a job, that means we didn’t do ours.</p>
+          <h3><span style="color: #FFC20E">Our Guarantee to you <?php echo $visitor->{'firstName'}; ?></span></h3>
+          <p class="text-white" style="font-size: 1.25rem">You will never be just a number to us. We are personally invested in your success before, during, and after Codeup.</p>
+          <p class="text-white" style="font-size: 1.25rem">If you don’t get a job, that means we didn’t do ours.</p>
           <p class="text-white" style="font-size: 1.25rem">So we guarantee that you will be hired within 6 months of graduating, or we will give you 100% of your tuition back.</p>
-          <button class="button button-primary" onClick="navigationCallback('https://app.hubspot.com/meetings/sarah187/general-infoquestions-round-robin')" type="button">Go Codeup Go!</button>
+          <button class="button button-primary" style="background-color: #FF9900; border-color: #FF9900" onClick="navigationCallback('https://app.hubspot.com/meetings/sarah187/general-infoquestions-round-robin')" type="button">Contact Us Now!</button>
         </div>
       </section>
 
       <section class="section section-md bg-default text-center" id="testimonials">
         <div class="container">
-          <h3 class="heading-decorated">Testimonial</h3>
+          <h3 class="heading-decorated">Hear it from one of our grads!</h3>
           <div class="videoWrapper mt-5" style="--aspect-ratio: 3 / 4;">
             <iframe
               width="560" height="315"
@@ -206,13 +217,13 @@
       </section>
 
       <!-- Call to Action-->
-      <section class="section-sm bg-accent text-center" id="contacts">
+      <section class="section-sm bg-accent text-center" id="contacts" style="background-color: #77A04A">
         <div class="container">
           <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
             <div class="col-xl-8 text-xl-left">
               <h4 class="heading-decoratedIf"><span style="color: #FFC20E"><?php echo $visitor->{'firstName'}; ?></span>, we'll be there to help at every step toward launching your new career. </h4>
             </div>
-            <div class="col-xl-2 text-xl-right"><button class="button button-primary" onClick="navigationCallback('https://app.hubspot.com/meetings/sarah187/general-infoquestions-round-robin')" type="button">Go Codeup Go!</button></div>
+            <div class="col-xl-2 text-xl-right"><button class="button button-primary" style="background-color: #FF9900; border-color: #FF9900; color: white;" onClick="navigationCallback('https://app.hubspot.com/meetings/sarah187/general-infoquestions-round-robin')" type="button">Book a call!</button></div>
           </div>
         </div>
       </section>
@@ -223,7 +234,7 @@
         <div class="container">
           <ul class="list-xxs">
             <li>
-              <dl class="list-terms-minimal">
+              <dl class="list-terms-minimal" style="font-size: 1.5rem">
                 <dt>Phone</dt>
                 <dd>
                   <ul class="list-semicolon">
@@ -233,17 +244,18 @@
               </dl>
             </li>
             <li>
-              <dl class="list-terms-minimal">
+              <dl class="list-terms-minimal" style="font-size: 1.5rem">
                 <dt>E-mail</dt>
                 <dd><a href="mailto:#">info@codeup.com</a></dd>
               </dl>
             </li>
           </ul>
           <ul class="list-inline-sm footer-minimal__list">
-            <li><a class="icon icon-sm icon-primary fa fa-facebook" href="#"></a></li>
-            <li><a class="icon icon-sm icon-primary fa fa-linkedin" href="#"></a></li>
-            <li><a class="icon icon-sm icon-primary fa fa-twitter" href="#"></a></li>
-            <li><a class="icon icon-sm icon-primary fa fa-youtube" href="#"></a></li>
+            <li><a class="icon icon-sm icon-primary fa fa-facebook" href="https://www.facebook.com/gocodeup"></a></li>
+            <li><a class="icon icon-sm icon-primary fa fa-linkedin" href="https://www.linkedin.com/school/codeup"></a></li>
+            <li><a class="icon icon-sm icon-primary fa fa-twitter" href="https://www.twitter.com/gocodeup"></a></li>
+            <li><a class="icon icon-sm icon-primary fa fa-youtube" href="https://www.youtube.com/channel/UCKBSm0lL94YukJMYRV8ZhKw"></a></li>
+            <li><a class="icon icon-sm icon-primary fa fa-instagram" href="https://www.instagram.com/gocodeup"></a></li>
           </ul>
           <p class="rights"><span>Codeup</span><span>&nbsp;&copy;&nbsp;</span><span class="copyright-year"></span>. All Rights Reserved.</p>
         </div>
