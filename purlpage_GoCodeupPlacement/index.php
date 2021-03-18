@@ -194,7 +194,7 @@
 
       <section class="section-lg bg-image text-center" style="background-color: #77A04A">
         <div class="container">
-          <h3><span style="color: #FFC20E">Our Guarantee to you <?php echo $visitor->{'firstName'}; ?></span></h3>
+          <h3><span style="color: #181d32">Our Guarantee to you <?php echo $visitor->{'firstName'}; ?></span></h3>
           <p class="text-white" style="font-size: 1.25rem">You will never be just a number to us. We are personally invested in your success before, during, and after Codeup.</p>
           <p class="text-white" style="font-size: 1.25rem">If you don’t get a job, that means we didn’t do ours.</p>
           <p class="text-white" style="font-size: 1.25rem">So we guarantee that you will be hired within 6 months of graduating, or we will give you 100% of your tuition back.</p>
