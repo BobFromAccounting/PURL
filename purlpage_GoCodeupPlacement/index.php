@@ -66,9 +66,8 @@
                   <br>
                   <span style="color: #77A04A"><?php echo $visitor->{'firstName'}; ?></span>?
                 </h2>
-                <p style="font-size: 1.5rem; font-weight: 500; background-color: black; opacity: .75; padding: 15px;">
-                  Learn to code from home in just 6 months. Get hired, or your money back
-                  <span style="color: #77A04A"><?php echo $visitor->{'firstName'}; ?></span>
+                <p style="font-size: 1.5rem; font-weight: 500; background-color: rgba(0,0,0,.75); padding: 15px;">
+                  Learn to code from home in just 6 months. Get hired, or <strong>your money back</strong>, guaranteed!
                 </p>
               </div>
               <div class="col-sm-10 col-md-6">
@@ -100,7 +99,7 @@
                       <input type="hidden" name="platform" value="<?php echo $_GET['platform']; ?>" />
                       <input type="hidden" name="userID" value="<?php echo $visitor->{'contact_client_id'}; ?>" />
                     </div>
-                    <button class="button button-primary" style="background-color: #FF9900; border-color: #FF9900;" type="submit">Contact Us Now!</button>
+                    <button class="button button-primary" style="background-color: #77A04A ; border-color: #77A04A ;" type="submit">Go Codeup Go!</button>
                   </form>
                 </div>
               </div>
@@ -198,7 +197,7 @@
           <p class="text-white" style="font-size: 1.25rem">You will never be just a number to us. We are personally invested in your success before, during, and after Codeup.</p>
           <p class="text-white" style="font-size: 1.25rem">If you don’t get a job, that means we didn’t do ours.</p>
           <p class="text-white" style="font-size: 1.25rem">So we guarantee that you will be hired within 6 months of graduating, or we will give you 100% of your tuition back.</p>
-          <button class="button button-primary" style="background-color: #FF9900; border-color: #FF9900" onClick="navigationCallback('https://app.hubspot.com/meetings/sarah187/general-infoquestions-round-robin')" type="button">Contact Us Now!</button>
+          <button class="button button-primary" style="background-color: #FF9900; border-color: #FF9900" onClick="navigationCallback('https://app.hubspot.com/meetings/sarah187/general-infoquestions-round-robin')" type="button">Contact us now!</button>
         </div>
       </section>
 
@@ -223,7 +222,7 @@
             <div class="col-xl-8 text-xl-left">
               <h4 class="heading-decoratedIf"><span style="color: #FFC20E"><?php echo $visitor->{'firstName'}; ?></span>, we'll be there to help at every step toward launching your new career. </h4>
             </div>
-            <div class="col-xl-2 text-xl-right"><button class="button button-primary" style="background-color: #FF9900; border-color: #FF9900; color: white;" onClick="navigationCallback('https://app.hubspot.com/meetings/sarah187/general-infoquestions-round-robin')" type="button">Book a call!</button></div>
+            <div class="col-xl-2 text-xl-right"><button class="button button-primary" style="background-color: #FF9900; border-color: #FF9900; color: white;" onClick="navigationCallback('https://codeup.com/contact/')" type="button">Contact us now!</button></div>
           </div>
         </div>
       </section>
